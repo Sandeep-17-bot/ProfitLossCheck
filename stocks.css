@@ -1,34 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap');
-body{
+
+body {
     font-family: 'Catamaran', sans-serif;
     background-image: url(https://th.bing.com/th/id/R.bc0182b53494fb918629815ce691c56f?rik=E3Ewa8g9fys8Xg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwp1870578.jpg&ehk=mkAou7YhRB8QxQXIUNYsrDUuYT49mrVsLSVKnIE7IPI%3d&risl=&pid=ImgRaw);
+
+
 }
 
-section{
+section {
     margin: auto;
     max-width: 487px;
     margin-top: 6rem;
     border: 1px solid black;
     padding: 3rem;
     backdrop-filter: blur(3px);
-background-repeat: no-repeat;
-
-
 }
-h1{
+
+h1 {
     font-size: 2rem;
 }
-input{
+
+input {
     /* background-color: black; */
     border-color: white;
     font-size: 1.1rem;
     /* text-decoration: underline black; */
     cursor: text;
 }
-span{
+
+span {
     font-size: 1.2rem;
 }
-button{
+
+button {
     margin: auto;
     padding: 0.5rem;
     padding-left: 1.5rem;
@@ -36,10 +40,15 @@ button{
     font-family: 'Catamaran', sans-serif;
     cursor: pointer;
 }
-#output{
+
+#output {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     padding: 0.5rem;
-   
+
+}
+
+#gif {
+    display: none;
 }

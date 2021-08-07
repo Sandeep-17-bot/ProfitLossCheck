@@ -4,46 +4,54 @@ const quantity = document.querySelector("#quantity")
 const current = document.querySelector("#current")
 
 
-form.addEventListener('submit', function(e){
+form.addEventListener('submit', function (e) {
     e.preventDefault()
-   
 
-// inital inputs
-var pvalue = price.value;
-var qvalue = quantity.value;
-var cvalue = current.value;
 
-// multiplying and substracting to know profit or loss
-var pqValue= pvalue*qvalue
-var cqValue= qvalue*cvalue
+    // inital inputs
+    var pvalue = price.value;
+    var qvalue = quantity.value;
+    var cvalue = current.value;
 
-var profit = (cqValue-pqValue).toFixed(2)
-var loss = (pqValue-cqValue).toFixed(2)
-// up to this clear
+    // multiplying and subtracting to know profit or loss
+    var pqValue = pvalue * qvalue
+    var cqValue = qvalue * cvalue
 
-var profitPCT = ((profit*100)/pqValue).toFixed(2)
-var lossPCT = ((loss*100)/pqValue).toFixed(2)
+    var profit = (cqValue - pqValue).toFixed(2)
+    var loss = (pqValue - cqValue).toFixed(2)
+    // up to this clear
 
-// getting output on screen
-var x = document.getElementById("output")
+    var profitPCT = ((profit * 100) / pqValue).toFixed(2)
+    var lossPCT = ((loss * 100) / pqValue).toFixed(2)
 
-if(profit>0){
+    // getting output on screen
+    var x = document.getElementById("output")
 
-    c = ("You gained "+ profitPCT + "%. "   +"Your total profit is ₹" + profit)
-    x.innerHTML = c
-    output.style.backgroundColor = "#7faebb69"
+    if (profit > 0) {
 
-}if(loss>0){
-    c = ("You lost "+ lossPCT + "%. " + "Your total loss is ₹" + loss)
-    x.innerHTML = c
-    output.style.backgroundColor = "#b63f5975"
-       
-}if(profit===loss){
-    c = ("You gained 0.00%. Your total profit is ₹0.00")
-    x.innerHTML = c
-    output.style.backgroundColor = "#0f0f0f61"
-    // gifs.style.backgroundImage = "url()"
-}
+        c = ("You gained " + profitPCT + "%. " + "Your total profit is ₹" + profit)
+        x.innerHTML = c
+        output.style.backgroundColor = "#7faebb69"
+        if (profitPCT > 50) {
+            gif.style.display = "block"
+            gif.style.backgroundImage = "URL('https://c.tenor.com/XkdK1AyRb6MAAAAC/noragami-ebisu.gif')"
+        }
+    }
+    if (loss > 0) {
+        c = ("You lost " + lossPCT + "%. " + "Your total loss is ₹" + loss)
+        x.innerHTML = c
+        output.style.backgroundColor = "#b63f5975"
+        if (lossPCT > 50) {
+            gif.style.display = "block"
+            gif.style.backgroundImage = "URL('https://c.tenor.com/d4MqJyc8e4EAAAAC/rent-steal.gif')"
+
+        }
+    }
+    if (profit === loss) {
+        c = ("You gained 0.00%. Your total profit is ₹0.00")
+        x.innerHTML = c
+        output.style.backgroundColor = "#0f0f0f61"
+    }
 
 
 
